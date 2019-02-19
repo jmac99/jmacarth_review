@@ -1,7 +1,7 @@
 package main.java;
 
 public final class Item {
-        public int key;
+        private int key;
         //constructor
         public Item(int keyValue) { 
                 key = keyValue;
