@@ -91,42 +91,36 @@ public class PowerSetData {
         case 0 : {
 
                     PowerSet.powerSetImplementation1(myArray);
+                    
                     break;
 
                   }
         case 1 : {
                     List<List<Integer>> ans = PowerSet.powerSetImplementation2(myArray);
 
-                    for (List<Integer> item : ans) {
-                        System.out.print("[ ");
-                        for (Integer item2 : item) {
-                            System.out.print(item2 + " ");
-                    }
-                        System.out.print("]");
-
-
-                    }
+                    printList(ans);
                     break;
         }
         case 2 : {
                     Set<Set<Integer>> ans = PowerSet.powerSetImplementation3(myArray);
 
-                    for (Set<Integer> item : ans) {
-                    System.out.print("[ ");
-                    for (Integer item2 : item) {
-                        System.out.print(item2 + " ");
-                        }
-                            System.out.print("] ");
+                    printList(ans);
 
-                        }
-
-
-                            break;
-                    }
+                    break;
+                 }
         default:
-            List<List<Integer>> ans = PowerSet.powerSetImplementation2(myArray);
+            		List<List<Integer>> ans = PowerSet.powerSetImplementation2(myArray);
 
-                for (List<Integer> item : ans) {
+            		printList(ans);
+
+                    break;
+                 }
+
+        }
+    
+    	private void printList(Set<Set<Integer>> ans)
+    	{
+    		for (Set<Integer> item : ans) {
                 System.out.print("[ ");
                 for (Integer item2 : item) {
                     System.out.print(item2 + " ");
@@ -134,11 +128,19 @@ public class PowerSetData {
                         System.out.print("] ");
 
                     }
+    	}
+    	
+    	private void printList(List<List<Integer>> ans)
+    	{
+    		for (List<Integer> item : ans) {
+                System.out.print("[ ");
+                for (Integer item2 : item) {
+                    System.out.print(item2 + " ");
+                    }
+                        System.out.print("] ");
 
-                    break;
-                }
-
-        }
+                    }
+    	}
     }
 
 
